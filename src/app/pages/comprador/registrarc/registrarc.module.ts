@@ -13,8 +13,10 @@ import { RegistrarcPage } from './registrarc.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    RegistrarcPageRoutingModule
+    RegistrarcPageRoutingModule,
+    FormsModule
   ],
   declarations: [RegistrarcPage]
 })
 export class RegistrarcPageModule {}
+

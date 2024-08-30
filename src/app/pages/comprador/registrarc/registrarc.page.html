@@ -3,46 +3,89 @@
     <ion-title>registrarc</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
-    </ion-buttons>
+  </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="contenedor">
-    <ion-header collapse="condense">
+ <div class="contenedor">
+    <div class="input-group">
+      <ion-input
+        class="formulario"
+        helperText="con guión y sin puntos"
+        label="Rut"
+        label-placement="floating"
+        fill="outline"
+        placeholder="XXXXXXXX-X"
+        [(ngModel)]="rut"
+      ></ion-input>
+      <ion-input
+        class="formulario"
+        label="Usuario"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Ingrese el nombre de su Usuario"
+        [(ngModel)]="usuario"
+      ></ion-input>
+    </div>
 
-    </ion-header>
-    <ion-input class="formulario " helperText="con guión y sin puntos" color="dark" label="Rut"
-      label-placement="floating" fill="outline" placeholder="XXXXXXXX-X">
-    </ion-input>
-    <br>
-    <ion-input class="formulario " color="dark" label="Usuario" label-placement="floating" fill="outline"
-      placeholder="Ingrese el nombre de su Usuario">
-    </ion-input>
-    <br>
-    <ion-input class="formulario " color="dark" label="Nombres" label-placement="floating" fill="outline"
-      placeholder="Ingrese sus nombres">
-    </ion-input>
-    <br>
-    <ion-input class="formulario " color="dark" label="Apellidos" label-placement="floating" fill="outline"
-      placeholder="Ingrese sus apellidos">
-    </ion-input>
-    <br>
-    <ion-input class="formulario " helperText="Ingrese un Email Valido" errorText="Email invalido" type="email"
-      color="dark" label="E-Mail" label-placement="floating" fill="outline" placeholder="email@dominio.com">
-    </ion-input>
-    <br>
-    <ion-input class="formulario " helperText="" errorText="Contraseña invalida" type="password" color="dark"
-      label="Contraseña" label-placement="floating" fill="outline" placeholder="Ingrese su contraseña">
-    </ion-input>
-    <ion-input class="formulario " helperText="Las contraseñas deben coincidir" errorText="Contraseña no coincide"
-      type="password" color="dark" label="Confirmar Contraseña" label-placement="floating" fill="outline"
-      placeholder="Confirme su contraseña">
-    </ion-input>
-    <br>
-    <ion-button class="boton">
-      crear cuenta
+    <div class="input-group">
+      <ion-input
+        class="formulario"
+        label="Nombre"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Ingrese sus nombres"
+        [(ngModel)]="nombre"
+      ></ion-input>
+      <ion-input
+        class="formulario"
+        label="Apellido"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Ingrese sus apellidos"
+        [(ngModel)]="apellido"
+      ></ion-input>
+    </div>
+
+    <div class="input-group">
+      <ion-input
+        class="formulario"
+        helperText="Ingrese un Email Valido"
+        errorText="Email invalido"
+        type="email"
+        label="E-Mail"
+        label-placement="floating"
+        fill="outline"
+        placeholder="email@dominio.com"
+        [(ngModel)]="correo"
+      ></ion-input>
+      <ion-input
+        class="formulario"
+        type="password"
+        label="Contraseña"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Ingrese su contraseña"
+        [(ngModel)]="contrasena"
+      ></ion-input>
+    </div>
+
+    <div class="input-group">
+      <ion-input
+        class="formulario"
+        type="password"
+        label="Confirmar Contraseña"
+        label-placement="floating"
+        helperText="Las contraseñas deben coincidir"
+        fill="outline"
+        placeholder="Confirme su contraseña"
+        [(ngModel)]="confirmarContrasena"
+      ></ion-input>
+    </div>
+
+    <ion-button class="boton" (click)="formulario()">
+      Crear Cuenta
     </ion-button>
-
   </div>
 </ion-content>
